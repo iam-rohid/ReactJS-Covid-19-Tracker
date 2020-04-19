@@ -7,6 +7,7 @@
     justify-content: center;
 }
 .Picker {
+    cursor: pointer;
     width: 300px;
     padding: 1rem 2rem;
     border: none;
@@ -14,13 +15,18 @@
     border-radius: 10px;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #666;
-    box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 0.1);
+    color: #888;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
     outline: none;
+    transition: all ease-in-out 200ms;
+}
+.Picker:hover {
+    box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 0.1);
+    color: #666;
 }
 .Container h2 {
     font-size: 1.6rem;
     font-weight: 600;
-    color: #999;
+    color: #888;
     margin-bottom: 20px;
 }
