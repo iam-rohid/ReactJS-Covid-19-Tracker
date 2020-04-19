@@ -1,0 +1,18 @@
+.SideBar-btn {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--bg1);
+    border: none;
+    outline: none;
+    border-radius: var(--br);
+    color: var(--fc2);
+    font-size: 1rem;
+    transition: all ease-in-out 100ms;
+    font-weight: 500;
+    text-align: left;
+}
+.SideBar-btn:hover {
+    background-color: var(--bg3);
+}

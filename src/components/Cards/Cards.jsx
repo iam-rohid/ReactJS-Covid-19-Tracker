@@ -1,10 +1,10 @@
 import React from "react";
 import Card from "./Card/Card";
-import styles from "./Cards.module.css";
+import "./Cards.css";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     return (
-        <div className={styles.CardsWrapper}>
+        <div className="CardsWrapper">
             <Card data={confirmed} lastUpdate={lastUpdate} CardTitle={"Confirmed"}>
                 <p>Number of active cases of COVID-19</p>
             </Card>

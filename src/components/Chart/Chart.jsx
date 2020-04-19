@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Line, Bar } from "react-chartjs-2";
 import { fetchDailyData } from "../../api";
-import styles from "./Chart.module.css";
+import "./Chart.css";
 
 export class Chart extends Component {
     constructor() {
@@ -23,15 +23,29 @@ export class Chart extends Component {
         if (dailyData.length && this.props.countryName === "Global") {
             return (
                 <Line
+                    legend={{
+                        labels: {
+                            display: true,
+                            fontColor: "#fff",
+                        },
+                    }}
                     data={{
                         labels: dailyData.map(({ date }) => date),
+                        defaultFontColor: "#fff",
                         datasets: [
                             {
                                 data: dailyData.map(({ confirmed }) => confirmed),
                                 label: "Confirmed",
                                 borderColor: "rgb(100,100,255)",
+                                borderWidth: 2,
                                 backgroundColor: "rgba(100,100,255,0.2)",
                                 fill: true,
+                                pointRadius: 2,
+                                pointHoverRadius: 5,
+                                pointHoverBackgroundColor: "#fff",
+                                pointHoverBorderWidth: 3,
+                                rotation: 0,
+                                lineTension: 0,
                             },
                             {
                                 data: dailyData.map(({ deaths }) => deaths),
@@ -39,6 +53,12 @@ export class Chart extends Component {
                                 borderColor: "rgb(255,50,50)",
                                 backgroundColor: "rgba(255,50,50,0.2)",
                                 fill: true,
+                                pointRadius: 2,
+                                pointHoverRadius: 5,
+                                pointHoverBackgroundColor: "#fff",
+                                pointHoverBorderWidth: 3,
+                                rotation: 0,
+                                lineTension: 0,
                             },
                         ],
                     }}
@@ -79,9 +99,11 @@ export class Chart extends Component {
 
     render() {
         return (
-            <div className={styles.container}>
-                {this.LineChart()}
-                {this.BarChart()}
+            <div className="ChartWrapper">
+                <div className="Chart">
+                    {this.LineChart()}
+                    {this.BarChart()}
+                </div>
             </div>
         );
     }

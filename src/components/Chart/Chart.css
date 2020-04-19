@@ -1,0 +1,15 @@
+.ChartWrapper {
+    width: 100%;
+    min-height: 500px;
+    padding: 40px;
+    background-color: var(--bg1);
+    border-radius: var(--br);
+    margin: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ChartWrapper .Chart {
+    width: calc(100% - 40px);
+}

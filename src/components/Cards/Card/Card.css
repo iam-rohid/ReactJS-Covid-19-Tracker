@@ -1,0 +1,67 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg1);
+    width: 100%;
+    padding: 40px;
+    border-radius: var(--br);
+}
+
+.Card .CardTitle {
+    font-size: 2rem;
+    color: var(--fc1);
+    margin-bottom: 10px;
+}
+
+.Card .CardValue {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--fc1);
+    margin-bottom: 10px;
+}
+.Card p {
+    font-size: 1rem;
+    color: var(--fc2);
+    margin-bottom: 5px;
+}
+
+.UnderLine {
+    width: 50%;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+/* .Card.Confirmed {
+    box-shadow: 0 30px 30px -30px rgba(100, 100, 255, 0.1);
+}
+.Card.Recovered {
+    box-shadow: 0 30px 30px -30px rgba(50, 240, 50, 0.1);
+}
+.Card.Deaths {
+    box-shadow: 0 30px 30px -30px rgba(255, 50, 50, 0.1);
+} */
+
+.CardTitle.Confirmed {
+    color: rgb(100, 100, 255);
+}
+
+.CardTitle.Recovered {
+    color: rgb(50, 240, 50);
+}
+
+.CardTitle.Deaths {
+    color: rgb(255, 50, 50);
+}
+.UnderLine.Confirmed {
+    background-color: rgb(100, 100, 255);
+}
+.UnderLine.Recovered {
+    background-color: rgb(50, 240, 50);
+}
+.UnderLine.Deaths {
+    background-color: rgb(255, 50, 50);
+}

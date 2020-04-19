@@ -1,0 +1,25 @@
+#SideBar {
+    position: fixed;
+    top: 0;
+    display: block;
+    width: var(--SideBar);
+    height: 100vh;
+    padding: 40px 10px;
+    background-color: var(--bg1);
+    box-sizing: border-box;
+}
+
+#SideBar .SubTitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--fc2);
+    margin-bottom: 40px;
+}
+#SideBar .Title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--fc1);
+    margin-bottom: 10px;
+}

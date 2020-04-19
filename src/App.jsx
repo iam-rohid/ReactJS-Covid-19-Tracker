@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import SideBar from "./components/SideBar/SideBar";
 import Cards from "./components/Cards/Cards";
 import Chart from "./components/Chart/Chart";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
-import Navbar from "./components/Navbar/Navbar";
 import { fetchData, fetchCountryData } from "./api";
-import styles from "./App.module.css";
+import "./App.css";
 
 class App extends Component {
     state = {
@@ -32,11 +33,13 @@ class App extends Component {
     render() {
         const { data, selectedCountry, countryData } = this.state;
         return (
-            <div className={styles.container}>
-                <Navbar />
-                <CountryPicker handleCountryChange={this.handleCountryChange} />
-                <Cards data={selectedCountry === "Global" ? data : countryData} />
-                <Chart countryData={countryData} countryName={selectedCountry} />
+            <div id="App" className="main-layout">
+                <SideBar />
+                <div className="wrapper">
+                    {/* <CountryPicker handleCountryChange={this.handleCountryChange} /> */}
+                    <Cards data={selectedCountry === "Global" ? data : countryData} />
+                    <Chart countryData={countryData} countryName={selectedCountry} />
+                </div>
             </div>
         );
     }
