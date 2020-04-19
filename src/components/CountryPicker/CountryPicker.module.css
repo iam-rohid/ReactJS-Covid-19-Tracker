@@ -1,0 +1,26 @@
+.Container {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Picker {
+    width: 300px;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #666;
+    box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+.Container h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 20px;
+}

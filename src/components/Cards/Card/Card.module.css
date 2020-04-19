@@ -1,0 +1,40 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    max-width: 360px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.1);
+}
+
+.Card .CardTitle {
+    font-size: 2rem;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.Card .CardValue {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+.Card p {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.underline {
+    width: 50%;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
