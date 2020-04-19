@@ -10,11 +10,16 @@ export class Chart extends Component {
             dailyData: [],
         };
         this.LineChart = this.LineChart.bind(this);
+        this.BarChart = this.BarChart.bind(this);
     }
     async componentDidMount() {
         const data = await fetchDailyData();
         if (data) {
-            this.setState({ dailyData: data });
+            var lastTwoMounthData = [];
+            for (let i = data.length - 60; i < data.length; i++) {
+                lastTwoMounthData.push(data[i]);
+            }
+            this.setState({ dailyData: lastTwoMounthData });
         }
     }
 
@@ -23,6 +28,7 @@ export class Chart extends Component {
         if (dailyData.length && this.props.countryName === "Global") {
             return (
                 <Line
+                    height="200"
                     legend={{
                         labels: {
                             display: true,
@@ -68,7 +74,7 @@ export class Chart extends Component {
     }
 
     BarChart() {
-        if (this.props.countryName !== "Global") {
+        if (this.props.countryData.confirmed && this.props.countryName !== "Global") {
             const {
                 countryData: { confirmed, recovered, deaths },
                 countryName,
@@ -100,6 +106,7 @@ export class Chart extends Component {
     render() {
         return (
             <div className="ChartWrapper">
+                <h2 className="ChartTitle">Current State of {this.props.countryName}</h2>
                 <div className="Chart">
                     {this.LineChart()}
                     {this.BarChart()}

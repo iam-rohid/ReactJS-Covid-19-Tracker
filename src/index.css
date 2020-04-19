@@ -6,9 +6,9 @@
     box-sizing: border-box;
 }
 :root {
-    --bg1: #242526;
-    --bg2: #18191a;
-    --bg3: #3a3b3c;
+    --bg1: #262a47;
+    --bg2: #1e2037;
+    --bg3: #2c3152;
     --fc1: rgb(240, 240, 240);
     --fc2: rgb(220, 220, 220);
     --SideBar: 260px;

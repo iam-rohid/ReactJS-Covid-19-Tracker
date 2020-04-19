@@ -1,12 +1,12 @@
 .CardsWrapper {
-    width: 100%;
+    grid-column: 1 / 5;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    grid-gap: 20px;
-    margin: 20px 0;
+    grid-auto-rows: auto;
+    grid-auto-columns: 1fr;
+    grid-gap: 40px;
+    /* height: fit-content; */
 }
-@media only screen and (max-width: 980px) {
+/* @media only screen and (max-width: 980px) {
     .CardsWrapper {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -15,4 +15,4 @@
     .CardsWrapper {
         grid-template-columns: repeat(1, 1fr);
     }
-}
+} */
